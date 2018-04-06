@@ -1,5 +1,8 @@
 module.exports = {
   create: (req, res) => {
-    res.status(200).send().catch(console.log)
+    console.log('works?')
+    db.get-inventory().then(products => {
+      res.status(200).send(products).catch(console.log)
+    })
   }
 }

@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const port = 3005,
-const app = express()
+const app = express('')
 const c = require('./controller')
 const massive = require('massive')
 
