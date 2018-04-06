@@ -11,29 +11,31 @@ export default class Form extends Component {
   }
 
   urlMethod(e) {
-    this.setSate = ({
+    this.setState({
       url: e.target.value
     })
   }
 
   priceMethod(e) {
-    this.setSate = ({
+    this.setState({
       url: e.target.value
     })
   }
   productMethod(e) {
-    this.setSate = ({
+    this.setState({
       url: e.target.value
     })
   }
 
   cancel() {
-    console.log('working?');
     this.setState({
       url: '',
       product: '',
       price: '',
+      
     })
+    console.log('THIS', this);
+    
   }
   
   render() {
@@ -42,7 +44,7 @@ export default class Form extends Component {
         <input placeholder="URL" type="text" onChange={e => this.urlMethod(e)} />
         <input placeholder="NAME" type="text" onChange={e => this.priceMethod(e)} />
         <input placeholder="PRICE" type="text" onChange={e => this.productMethod(e)} />
-        <button onClick={e => this.cancel()}>Cancel</button>
+        <button onClick={(e) => this.cancel()}>Cancel</button>
         <button>Add To Inventory</button>
       </div>
     )
