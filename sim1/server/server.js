@@ -10,9 +10,8 @@ app.use(bodyParser.json())
 massive(process.env.connectionString).then(db => app.set('db', db))
 
 app.get('/api/inventory', c.create)
-// app.get('/api/product/:id', c.getOne)
+app.post('/api/product', c.create)
 // app.put('/api/product/:id?desc=', c.update)
-// app.post('/api/product', c.create)
 // app.delete('/api/product/:id', c.delete)
 
 
