@@ -9,7 +9,7 @@ require('dotenv').config()
 app.use(bodyParser.json())
 massive(process.env.connectionString).then(db => app.set('db', db))
 
-// app.get('/api/products', c.create)
+app.get('/api/inventory', c.create)
 // app.get('/api/product/:id', c.getOne)
 // app.put('/api/product/:id?desc=', c.update)
 // app.post('/api/product', c.create)

@@ -9,8 +9,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      inventoryList: [['name', 'price', 'img'], ['name', 'price', 'img']]
+      inventoryList: [['name', 'price', 'img'], ['kev', 'priceless', 'img']]
     }
+    
   }
   render() {
     return (
