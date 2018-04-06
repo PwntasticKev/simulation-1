@@ -5,38 +5,37 @@ export default class Form extends Component {
     super();
     this.state = {
       url: '',
-      product: '',
       price: '',
+      product: '',
     }
   }
-
+  
+  cancel(e) {
+    this.setState({
+      url: e.target.value = '',
+      product: e.target.value = '',
+      price: e.target.value = '',
+      
+    }, console.log('THIS', this))
+  }
   urlMethod(e) {
     this.setState({
       url: e.target.value
     })
+    console.log(e.target.value)
   }
-
+  
   priceMethod(e) {
     this.setState({
-      url: e.target.value
+      price: e.target.value
     })
   }
   productMethod(e) {
     this.setState({
-      url: e.target.value
+      product: e.target.value
     })
   }
 
-  cancel() {
-    this.setState({
-      url: '',
-      product: '',
-      price: '',
-      
-    })
-    console.log('THIS', this);
-    
-  }
   
   render() {
     return (
@@ -44,7 +43,7 @@ export default class Form extends Component {
         <input placeholder="URL" type="text" onChange={e => this.urlMethod(e)} />
         <input placeholder="NAME" type="text" onChange={e => this.priceMethod(e)} />
         <input placeholder="PRICE" type="text" onChange={e => this.productMethod(e)} />
-        <button onClick={(e) => this.cancel()}>Cancel</button>
+        <button onClick={(e) => this.cancel(e)}>Cancel</button>
         <button>Add To Inventory</button>
       </div>
     )

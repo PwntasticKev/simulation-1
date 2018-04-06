@@ -5,9 +5,13 @@ class Dashboard extends Component {
 
 
   render() {
+    this.props.inventoryList.map(obj => {
+      return <div key={obj.list}>{this.props.inventoryList}</div>
+    })
     return (
       <div>
         <Product/>
+        {this.props.inventoryList}
       </div>
     )
   }

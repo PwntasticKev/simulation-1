@@ -6,11 +6,17 @@ import Header from './Components/Header/Header'
 import axios from 'axios'
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      inventoryList: [['name', 'price', 'img'], ['name', 'price', 'img']]
+    }
+  }
   render() {
     return (
       <div className="App">
-      <Dashboard/>
       <Header/>
+      <Dashboard inventoryList={this.state.inventoryList}/>
       <Form/>
       </div>
     );
